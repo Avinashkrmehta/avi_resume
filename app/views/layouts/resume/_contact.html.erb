@@ -1,0 +1,45 @@
+	<div class="welcome contact" id="contact">
+		<div class="container">
+			<h3 class="title">Contact Us</h3>
+			<div class="contact-row">
+				<div class="col-md-6 contact-left">
+					<iframe src="https://www.google.com/maps/@25.8243998,85.20376,8.92z"></iframe>
+				</div>
+				<div class="col-md-6 contact-right">
+					<div class="address-left">
+						<p>Bailey Road, R.K Puram Patna,<br> Patna,Bihar India</p>
+					</div>
+					<div class="address-right">
+						<p>Call us :  +91 812 068 2298</p>
+						<p>E-mail : <a href="mailto:avi4791@gmail.com">avi4791@gmail.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+					<div class="contact-form">
+							<%=form_for Feedback.new, :url => home_feedback_path do |f|%> 
+							<div class="field">
+							    <%= f.label :name %><br>
+							    <%= f.text_field :name , placeholder: "Name" ,required: true%>
+							  </div>
+							  <div class="field">
+							    <%= f.label :contact %><br>
+							    <%= f.text_field :contact,  placeholder: "Contact" ,required: true %>
+							  </div>
+							  <div class="field">
+							    <%= f.label :email %><br>
+							    <%= f.text_field :email,  placeholder: "Email" ,required: true%>
+							  </div>
+							  <div class="field">
+							    <%= f.label :message %><br>
+							    <%= f.text_area :message,  placeholder: "Message" ,required: true %>
+							  </div>
+							  <div class="actions">
+							    <%= f.submit %>
+							  </div>
+								</form>
+						<% end %>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
